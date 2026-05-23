@@ -30,7 +30,7 @@ const AuthPage = ({ onLogin }) => {
         return setError("Password must be at least 6 characters.");
     } else {
       if (!form.email || !form.password)
-        return setError("Email and password are required.");
+        return setError("Username/Email and password are required.");
     }
 
     setLoading(true);
@@ -111,12 +111,12 @@ const AuthPage = ({ onLogin }) => {
           )}
 
           <div className="auth-field">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">Email or Username</label>
             <input
               id="email"
               name="email"
-              type="email"
-              placeholder="Enter your email"
+              type="text"
+              placeholder="Enter your email or username"
               value={form.email}
               onChange={handle}
               autoComplete="email"
