@@ -41,7 +41,7 @@ const AuthPage = ({ onLogin }) => {
           ? { username: form.username, email: form.email, password: form.password }
           : { email: form.email, password: form.password };
 
-      const res = await fetch(`http://localhost:5000${endpoint}`, {
+      const res = await fetch(`https://mood-calendar-backend-main-1.onrender.com${endpoint}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
