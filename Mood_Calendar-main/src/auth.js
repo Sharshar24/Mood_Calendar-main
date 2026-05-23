@@ -1,4 +1,4 @@
-const API = "http://localhost:5000";
+const API = "https://mood-calendar-backend-main-1.onrender.com";
 
 export const getToken = () => localStorage.getItem("vv_token");
 export const getUser  = () => {
